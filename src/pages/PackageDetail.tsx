@@ -81,6 +81,7 @@ const PackageDetail = () => {
                   <TabsTrigger value="overview">Overview</TabsTrigger>
                   <TabsTrigger value="itinerary">Itinerary</TabsTrigger>
                   <TabsTrigger value="inclusions">Inclusions & Exclusions</TabsTrigger>
+                  <TabsTrigger value="gallery">Gallery</TabsTrigger>
                 </TabsList>
                 
                 <TabsContent value="overview" className="space-y-6">
@@ -142,6 +143,86 @@ const PackageDetail = () => {
                           </li>
                         ))}
                       </ul>
+                    </div>
+                  </div>
+                </TabsContent>
+                
+                <TabsContent value="gallery">
+                  <div className="space-y-6">
+                    <h3 className="text-xl font-semibold mb-3">Destination Gallery</h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                      <div className="aspect-video rounded-lg overflow-hidden">
+                        <img 
+                          src={packageItem.imageUrl} 
+                          alt={`${packageItem.name} - Main`}
+                          className="w-full h-full object-cover hover:scale-105 transition-transform"
+                        />
+                      </div>
+                      {packageItem.category === "india" ? (
+                        // Sample images for Indian destinations
+                        <>
+                          <div className="aspect-video rounded-lg overflow-hidden">
+                            <img 
+                              src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" 
+                              alt={`${packageItem.destination} - View 1`}
+                              className="w-full h-full object-cover hover:scale-105 transition-transform"
+                            />
+                          </div>
+                          <div className="aspect-video rounded-lg overflow-hidden">
+                            <img 
+                              src="https://images.unsplash.com/photo-1477587458883-47145ed94245?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                              alt={`${packageItem.destination} - View 2`}
+                              className="w-full h-full object-cover hover:scale-105 transition-transform"
+                            />
+                          </div>
+                          <div className="aspect-video rounded-lg overflow-hidden">
+                            <img 
+                              src="https://images.unsplash.com/photo-1598091383021-15ddea10925d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                              alt={`${packageItem.destination} - View 3`}
+                              className="w-full h-full object-cover hover:scale-105 transition-transform"
+                            />
+                          </div>
+                          <div className="aspect-video rounded-lg overflow-hidden">
+                            <img 
+                              src="https://images.unsplash.com/photo-1537734552481-35f4a9aca8c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" 
+                              alt={`${packageItem.destination} - View 4`}
+                              className="w-full h-full object-cover hover:scale-105 transition-transform"
+                            />
+                          </div>
+                        </>
+                      ) : (
+                        // Sample images for International destinations
+                        <>
+                          <div className="aspect-video rounded-lg overflow-hidden">
+                            <img 
+                              src="https://images.unsplash.com/photo-1499856871958-5b9088d4687d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2020&q=80" 
+                              alt={`${packageItem.destination} - View 1`}
+                              className="w-full h-full object-cover hover:scale-105 transition-transform"
+                            />
+                          </div>
+                          <div className="aspect-video rounded-lg overflow-hidden">
+                            <img 
+                              src="https://images.unsplash.com/photo-1565967511849-76a60a516170?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" 
+                              alt={`${packageItem.destination} - View 2`}
+                              className="w-full h-full object-cover hover:scale-105 transition-transform"
+                            />
+                          </div>
+                          <div className="aspect-video rounded-lg overflow-hidden">
+                            <img 
+                              src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                              alt={`${packageItem.destination} - View 3`}
+                              className="w-full h-full object-cover hover:scale-105 transition-transform"
+                            />
+                          </div>
+                          <div className="aspect-video rounded-lg overflow-hidden">
+                            <img 
+                              src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                              alt={`${packageItem.destination} - View 4`}
+                              className="w-full h-full object-cover hover:scale-105 transition-transform"
+                            />
+                          </div>
+                        </>
+                      )}
                     </div>
                   </div>
                 </TabsContent>

@@ -17,6 +17,7 @@ export interface PackageType {
   }[];
   inclusions: string[];
   exclusions: string[];
+  images?: string[]; // Optional array of additional images
 }
 
 export interface CustomerInquiry {
